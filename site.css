@@ -40,6 +40,10 @@
     }
 }
 
+.typed-cursor{
+    /* display: none; */
+}
+
 html{
     scroll-behavior: smooth;
     scrollbar-width: none;
@@ -119,7 +123,7 @@ li{
 
 .textnama{
     margin: 0;
-    margin-bottom: 3    vh;
+    margin-bottom: 3vh;
     line-height: 0.95;
     width: 100%;
     font-size: clamp(15vw, 18vw, 18vw);
@@ -285,23 +289,30 @@ li{
 /*ABOUT ME*/
 
 .about{
-    /* background-color: black; */
     background-image: url("asset/background 1.png");
     min-height: 100vh;
-    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    /* align-items: flex-start; */
+    gap: 5vw;
+    /* padding: 8rem 6vw; */
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.left-side{
+    margin-top: 7rem;
+    width: 350px;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    align-items: flex-start;
-    gap: 1rem;
+    flex-shrink: 0;
 }
 
 .photo{
-    margin-left: 5vw;
-    margin-top: 15vh;
-    width: 25vw;
-    overflow: hidden;
+    width: 100%;
     border-radius: 20px;
+    overflow: hidden;
     aspect-ratio: 1/1;
     animation: appear linear;
     animation-timeline: view();
@@ -310,107 +321,77 @@ li{
 
 .photo img{
     width: 100%;
+    height: 100%;
     object-fit: cover;
-    display: block;
 }
 
 .about-text{
     flex: 1;
-    /* background-color: aqua; */
+    max-width: 900px;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
-    margin-left: 35vw;
-    margin-top: -55vh;
-
+    margin-top: 0;
 }
 
 .about-title{
-    /* background-color: aquamarine; */
-    /* transform: translate(-3rem, -25rem); */
+    margin-top: 6rem;
     font-size: clamp(3vw, 4vw, 4vw);
-    font-family: "Poppins Black";
     color: white;
+    font-family: "Poppins Black";
     animation: appear linear;
     animation-timeline: view();
     animation-range: entry 0% cover 40%;
 }
 
 .about-desc{
-    /* background-color: aquamarine; */
-    max-width: 57rem;
-    overflow-wrap: break-word;
-    text-align: left;
-    /* transform: translate(10rem, -25rem); */
+    margin-top: 1rem;
+    color: white;
     font-size: clamp(1.2vw, 1.2vw, 1.2vw);
     font-family: "Poppins";
-    color: white;
+    overflow-wrap: break-word;
+    text-align: left;
     animation: appear linear;
     animation-timeline: view();
     animation-range: entry 0% cover 40%;
 }
 
 .contact{
-    flex: 1;
-    /* background-color: aqua; */
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
-    margin-left: 5vw;
-    margin-top: 0vh;
+    gap: 9px;
+    margin-top: 2rem;
 }
 
 .create{
-    font-size: clamp(1vw,2vw,2vw);
-    font-family: "Poppins Bold Italic";
     color: white;
+    font-family: "Poppins Bold Italic";
+    font-size: clamp(1vw,2vw,2vw);
     animation: appear linear;
     animation-timeline: view();
     animation-range: entry 0% cover 10%;
 }
 
-.insta-logo{
-    margin-top: 2vh;
-    width: 2vw;
-    border-radius: 20px;
-    aspect-ratio: 1/1;
+.insta,
+.email{
+    display: flex;
+    align-items: center;
+    gap: 12px;
 }
 
-.insta-logo img{
-    width: 100%;
-    object-fit: cover;
-    display: block;
-}
-
-.ig-handle{
-    text-decoration: none;
-    margin-left: 3vw;
-    margin-top: -4.5vh;
-    font-size: clamp(1.5vw,1.5vw,1.5vw);
-    font-family: "Poppins";
-    color: white;
-}
-
+.insta-logo,
 .email-logo{
-    margin-top: 2vh;
-    width: 2vw;
-    border-radius: 20px;
-    aspect-ratio: 1/1;
+    width: 32px;
 }
 
+.insta-logo img,
 .email-logo img{
     width: 100%;
-    object-fit: cover;
-    display: block;
 }
 
+.ig-handle,
 .email-handle{
+    color: white;
     text-decoration: none;
-    margin-left: 3vw;
-    margin-top: -4.5vh;
     font-size: clamp(1.5vw,1.5vw,1.5vw);
     font-family: "Poppins";
-    color: white;
 }
